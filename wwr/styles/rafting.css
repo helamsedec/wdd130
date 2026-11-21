@@ -7,6 +7,7 @@
     --body-font: Arial, Helvetica, sans-serif;
     --heading-font: Georgia, serif;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -18,26 +19,53 @@ body {
     color: var(--accent1-color);
 }
 
-header, main {
+header,
+main {
     width: 840px;
     margin: 0 auto;
 }
+
 footer {
     width: 840px;
-    margin: 0 auto;
-    color: var(--accent2-color);
-    border-top: 2px solid #000000;
-    margin-top: 20px;
+    margin: 20px auto 0 auto;
     padding-top: 15px;
+    border-top: 2px solid #000000;
+    color: var(--accent2-color);
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    background-color: #0b2545;
 }
-h1, h2{
+
+footer p {
+    grid-column: 2;
+    text-align: center;
+    margin: 0;
+    color: #ffffff;
+}
+
+footer .socialmedia {
+    grid-column: 3;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+}
+
+h1,
+h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
+
 h3 {
     color: var(--accent3-color);
 }
-nav, p, section, article{
+
+p,
+section,
+article {
     margin: 16px;
     padding: 8px;
 }
@@ -73,7 +101,8 @@ nav, p, section, article{
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(11, 37, 69, 0.85); /* Fondo azul oscuro translúcido como el ejemplo */
+    background-color: rgba(11, 37, 69, 0.85);
+    /* Fondo azul oscuro translúcido como el ejemplo */
     color: white;
     padding: 20px;
     width: 90%;
@@ -91,6 +120,7 @@ nav, p, section, article{
     color: white;
     font-size: 0.9rem;
 }
+
 main section {
     margin: 20px 0;
     text-align: center;
@@ -98,8 +128,9 @@ main section {
 
 /* La franja o cuadro azul exclusivo para el título */
 main section h2 {
-    background-color: var(--secondary-color); /* Fondo azul */
-    color: white; /* Texto blanco en el título */
+    background-color: var(--secondary-color);
+    /* Fondo azul */
+    color: white;
     font-family: var(--heading-font);
     padding: 12px 20px;
     margin-bottom: 10px;
@@ -108,9 +139,101 @@ main section h2 {
 
 /* El párrafo queda fuera de la franja azul, en su propia línea y color negro */
 main section p {
-    color: #000000; /* Texto en color negro */
-    text-align: left; 
+    color: #000000;
+    /* Texto en color negro */
+    text-align: left;
     font-size: 1rem;
     padding: 5px 10px;
     line-height: 1.5;
+}
+
+/*
+.grid {
+    #display: grid;
+    #align-items: center;
+    max-width: 840px;
+    margin: 0 auto;
+}
+*/
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 2px;
+    padding: 0px;
+}
+
+header img {
+    display: block;
+    max-width: 130px;
+    margin: 0%;
+    padding: 0%;
+    height: auto;
+}
+
+nav {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    list-style: none;
+    flex: 1 1 auto;
+    background-color: #0b2545;
+    height: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    margin: 4% auto;
+    padding: 10px 16px;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+nav a {
+    display: block;
+    color: white;
+    font-family: var(--body-font);
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.history-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.history-grid img {
+    width: 220px;
+    height: auto;
+    display: block;
+}
+
+.adventure-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.adventure-grid figure {
+    margin: 0;
+    text-align: center;
+}
+
+.adventure-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.adventure-grid figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
 }
